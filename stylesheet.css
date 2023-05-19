@@ -1,10 +1,10 @@
 body {
-	background-color: LightGray;
+	background-color: DarkGray;
 }
 
 p {
-	color: red;
-	text-align: center;
+	color: White;
+	text-align: left;
 }
 
 div {
