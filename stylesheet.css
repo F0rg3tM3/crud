@@ -2,3 +2,7 @@ p {
 	color: red;
 	text-align: center;
 }
+
+div {
+	background-color: lightgray;
+}
