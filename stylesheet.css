@@ -1,6 +1,10 @@
 body {
 	background-color: 	DarkGray;
-	padding-top: 10px;
+}
+
+h2 {
+	text-align:		center;
+	color:			White;
 }
 
 p {
@@ -17,7 +21,31 @@ p {
 	line-height: 		50px;
 	border: 		2px;
 	text-align: 		center;
-	border-radius:		5px;
-	background-color: 	LightGray;
+	border-radius:		10px;
+	background-color: 	DimGray;
 	height: 		50px;
+}
+
+#maingrid {
+	padding: 		1%;
+	display: 		grid;
+	row-gap: 		20px;
+	column-gap: 		20px;
+	grid-template-columns: 	33% 66%;
+	height: 		475px;
+}
+
+#infoheader {
+	background-color: 	LightGray;
+	border-radius: 		5px;
+}
+
+#table {
+	background-color: 	LightGray;
+	border-radius: 		5px;
+}
+
+#backheader {
+	background-color:	DimGray;
+	border-radius:		5px;
 }
