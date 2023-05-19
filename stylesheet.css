@@ -1,13 +1,20 @@
 body {
-	background-color: DarkGray;
+	background-color: 	DarkGray;
 }
 
 p {
-	color: White;
-	text-align: left;
+	color: 			White;
+	text-align: 		left;
+	margin-left: 		1.25%;
+	font-size: 		25px;
+	font-weight: 		bold;
 }
 
 #headtag {
-	background-color: LightGray;
-	height: 30px;
+	line-height: 		30px;
+	border: 		2px;
+	text-align: 		center;
+	border-radius:		5px;
+	background-color: 	LightGray;
+	height: 		30px;
 }
