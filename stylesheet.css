@@ -1,5 +1,7 @@
 body {
-	background-color: 	DarkGray;
+	background-image: 	url(bgp.jpg);
+	background-size:	cover;
+	background-repeat:	no-repeat;
 }
 
 h2 {
