@@ -7,8 +7,6 @@
 		<script type="module" src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
 		<script type="module" src="index.js"></script>
 		<script>
-			var test = "test";
-			
 			function getInfo() {
 				var fname = document.getElementById("fname").value;
 				var lname = document.getElementById("lname").value;
@@ -18,20 +16,22 @@
 				return [fname, lname, uname, pword, fsubj];
 			};
 
-			function create() {
+			function C_create() {
 				var inputs = getInfo();
 				CRUD_Create(inputs[0]);
 			};
 			
-			function read() {
+			function C_read() {
 				CRUD_Read();
 			};
 			
-			function update() {
+			function C_update() {
 				CRUD_Update();
 			};
 			
-			
+			function C_delete() {
+				CRUD_Delete();
+			};
 		</script>
 		<link rel="stylesheet" href="stylesheet.css">
   	</head>
@@ -52,10 +52,10 @@
 						<input type="text" id="fsubj" placeholder="Favorite Subject"></input>
 					</form>
 					<div id="functions">
-						<button onclick="create()">CREATE</button>
-						<button onclick="read()">READ</button>
-						<button onclick="update()">UPDATE</button>
-						<button onclick="delete()">DELETE</button>
+						<button onclick="C_create()">CREATE</button>
+						<button onclick="C_read()">READ</button>
+						<button onclick="C_update()">UPDATE</button>
+						<button onclick="C_delete()">DELETE</button>
 					</div>
 				</div>
 				<div id="table">
