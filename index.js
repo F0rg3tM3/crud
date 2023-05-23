@@ -1,4 +1,15 @@
-const database = "";
+const firebaseConfig {
+	apiKey: 		"",
+	authDomain: 		"",
+	projectId: 		"",
+	storageBucket:		"",
+	messagingSenderId:	"",
+	appId:			"",
+	measurementId:		"",
+	databaseURL:		"https://crud-cc73f.firebaseio.com"
+}
+
+const app = firebase.initializeApp(firebaseConfig);
 
 function CRUD_Create() {
 	console.log("Create Function");
