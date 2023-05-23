@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
 	apiKey: 		"AIzaSyBu65k6Ik4735F9foAilaFsLgATPVBZ8go",
@@ -15,21 +15,23 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-var database = getDatabase(app);
+var database = getFirestore(app);
 
 function CRUD_Create(fname, lname, uname, pword, fsubj) {
 	
 	// CREATE FUNCTION
 	console.log("Create Function");
-
-	const user = ref(database, 'users/' + uname).set({
-		firstname : fname,
-		lastname : lname,
-		username : uname,
-		password : pword,
-		favourite_subject : fsubj
-	})
-	
+	try {
+		const docRef = await addDoc(collection(database, "users"), {
+			firstname: fname,
+			lastname: lname,
+			username: uname,
+			password: pword,
+			fav_subj: fsubj
+		})
+	} catch(e) {
+		alert("An issue occured!");
+	}
 	alert('SAVED')
 };
 globalThis.CRUD_Create = CRUD_Create;
