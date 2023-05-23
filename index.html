@@ -8,7 +8,11 @@
 		<script type="module" src="index.js"></script>
 		<script>
 			function getInfo() {
-				CRUD_CREATE();
+				CRUD_Create();
+			};
+
+			function create() {
+				CRUD_Create();
 			};
 			
 		</script>
@@ -31,10 +35,10 @@
 						<input type="text" id="fsubj" placeholder="Favorite Subject"></input>
 					</form>
 					<div id="functions">
-						<button onclick="CRUD_Create()">CREATE</button>
-						<button onclick="CRUD_Read()">READ</button>
-						<button onclick="CRUD_Update()">UPDATE</button>
-						<button onclick="CRUD_Delete()">DELETE</button>
+						<button onclick="create()">CREATE</button>
+						<button onclick="read()">READ</button>
+						<button onclick="update()">UPDATE</button>
+						<button onclick="delete()">DELETE</button>
 					</div>
 				</div>
 				<div id="table">

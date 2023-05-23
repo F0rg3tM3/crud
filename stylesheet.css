@@ -1,7 +1,6 @@
 body {
 	background-image: 	url(bgp.jpg);
-	width:			25%
-	height: 		25%
+	background-size: 	cover;
 	background-repeat:	no-repeat;
 }
 
