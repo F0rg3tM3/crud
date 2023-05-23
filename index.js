@@ -89,7 +89,7 @@ function CRUD_Delete(uname, pword) {
 			} else {
 				alert("The account does not exist!");
 			}
-		}}
+		})
 	);
 };
 globalThis.CRUD_Delete = CRUD_Delete;
