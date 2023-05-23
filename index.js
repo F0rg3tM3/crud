@@ -22,7 +22,7 @@ function CRUD_Create(fname, lname, uname, pword, fsubj) {
 	// CREATE FUNCTION
 	console.log("Create Function");
 
-	database.ref('users/' + uname).set({
+	const user = ref(database, 'users/' + uname).set({
 		firstname : fname,
 		lastname : lname,
 		username : uname,
