@@ -30,19 +30,31 @@
 
 			function C_create() {
 				var inputs = getInfo();
-				CRUD_Create(inputs[0]);
+				CRUD_Create(inputs[0], 	//FirstName
+					inputs[1],	//LastName
+					inputs[2],	//UserName
+					inputs[3],	//PassWord
+					inputs[4]);	//Fav. Subject
 			};
 			
 			function C_read() {
-				CRUD_Read();
+				var inputs = getInfo();
+				CRUD_Read(inputs[2]);
 			};
 			
 			function C_update() {
-				CRUD_Update();
+				var inputs = getInfo();
+				CRUD_Update(inputs[0],
+					inputs[1],
+					inputs[2],
+					inputs[3],
+					inputs[4]);
 			};
 			
 			function C_delete() {
-				CRUD_Delete();
+				var inputs = getInfo();
+				CRUD_Delete(inputs[2],
+					inputs[3]);
 			};
 		</script>
 		<link rel="stylesheet" href="stylesheet.css">
