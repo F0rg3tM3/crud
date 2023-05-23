@@ -78,5 +78,18 @@ function CRUD_Delete(uname, pword) {
 	console.log("Delete Function");
 	
 	var user_info = database.ref('users/' + uname);
+	
+	user_info.child('password').once('value', function(snapshot) {
+			var mainpword = snapshot.val();
+			
+			if (mainpword == pword) {
+				user_info.remove();
+				
+				alert("The account was successfully removed!");
+			} else {
+				alert("The account does not exist!");
+			}
+		};
+	);
 };
 window.CRUD_Delete = CRUD_Delete;
