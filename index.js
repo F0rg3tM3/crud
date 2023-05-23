@@ -17,22 +17,66 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 var database = getDatabase(app);
 
-function CRUD_Create(fname) {
-	console.log(fname);
+function CRUD_Create(fname, lname, uname, pword, fsubj) {
+	
+	// CREATE FUNCTION
+	console.log("Create Function");
+
+	database.ref('users/' + username).set({
+		firstname : fname,
+		lastname : lname,
+		username : uname,
+		password : pword,
+		favourite_subject : fsubj
+	})
+	
+	alert('SAVED')
 };
 window.CRUD_Create = CRUD_Create;
 
-function CRUD_Read() {
-	console.log("Read Function");
+function CRUD_Read(uname) {
+	
+	// READ FUNCTION
+	console.log("Read Function");	
+	
+	var user_info = database.ref('users/' + uname);
+	user_info.on('value', function(snapshot) { 
+		var data = snapshot.val (); 
+		alert(data.uname);
+	});
 };
 window.CRUD_Read = CRUD_Read;
 
-function CRUD_Update() {
-	console.log("Update Function");
+function CRUD_Update(fname, lname, uname, pword, fsubj) {
+	
+	// UPDATE FUNCTION
+	console.log("Update Function");	
+
+	var user_info = database.ref('users/' + uname);
+
+	user_info.once('value', function(snapshot) {
+		if (snapshot.exists()) {
+			var update = {
+				firstname: fname,
+				lastname: lname,
+				username: uname,
+				password: pword,
+				favourite_subject: fsubj
+			};
+			user_info.update(update);
+
+			alert("Successfully updated!");
+		} else {
+			alert("Username does not exist!");
+		};
+	});
 };
 window.CRUD_Update = CRUD_Update;
 
-function CRUD_Delete() {
+function CRUD_Delete(uname, pword) {
+	
 	console.log("Delete Function");
+	
+	var user_info = database.ref('users/' + uname);
 };
 window.CRUD_Delete = CRUD_Delete;

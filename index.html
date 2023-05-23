@@ -13,7 +13,19 @@
 				var uname = document.getElementById("uname").value;
 				var pword = document.getElementById("pword").value;
 				var fsubj = document.getElementById("fsubj").value;
-				return [fname, lname, uname, pword, fsubj];
+				
+				if (uname === '') {
+					alert("Username field is empty");
+					return
+				} else if (pword === '') {
+					alert("Password field is empty");
+					return;
+				} else if (uname === '' && pword == '') {
+					alert("Username and Password field is empty!");
+					return;
+				} else {
+					return [fname, lname, uname, pword, fsubj];
+				}
 			};
 
 			function C_create() {
