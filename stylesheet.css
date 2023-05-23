@@ -33,7 +33,7 @@ p {
 	display: 		grid;
 	row-gap: 		20px;
 	column-gap: 		20px;
-	grid-template-columns: 	33% 66%;
+	grid-template-columns: 	33% 33%;
 	height: 		475px;
 }
 
@@ -57,22 +57,22 @@ p {
 }
 
 #form {
-	padding: 3%;
-	width: 94%;
-	height: 50%;
-	display: grid;
-	row-gap: 10px;
+	padding: 		3%;
+	width: 			94%;
+	height: 		50%;
+	display: 		grid;
+	row-gap: 		10px;
 }
 
 #functions {
-	display: grid;
+	display: 		grid;
 	grid-template-columns:	47% 47%;
 	grid-template-rows:	50% 50%;
-	row-gap: 5px;
-	column-gap: 10px;
-	padding: 10px 0px 0px 10px;
+	row-gap: 		5px;
+	column-gap: 		10px;
+	padding: 		10px 0px 0px 10px;
 }
 
 button {
-	height: 45px;
+	height: 		45px;
 }

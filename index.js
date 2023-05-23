@@ -96,6 +96,10 @@ function CRUD_Delete(uname, pword) {
 		if (doc.data()["password"] == pword) {
 			deleteDoc(docRef);
 			alert("Successfully Removed");
+			document.getElementById("FirstName").text = "First Name: "
+			document.getElementById("LastName").text = "Last Name: "
+			document.getElementById("Username").text = "Username: "
+			document.getElementById("FavouriteSubject").text = "Favourite Subject: ";
 		} else {
 			alert("Password is Invalid!");
 		}
