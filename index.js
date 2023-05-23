@@ -32,7 +32,7 @@ function CRUD_Create(fname, lname, uname, pword, fsubj) {
 	
 	alert('SAVED')
 };
-window.CRUD_Create = CRUD_Create;
+globalThis.CRUD_Create = CRUD_Create;
 
 function CRUD_Read(uname) {
 	
@@ -45,7 +45,7 @@ function CRUD_Read(uname) {
 		alert(data.uname);
 	});
 };
-window.CRUD_Read = CRUD_Read;
+globalThis.CRUD_Read = CRUD_Read;
 
 function CRUD_Update(fname, lname, uname, pword, fsubj) {
 	
@@ -71,7 +71,7 @@ function CRUD_Update(fname, lname, uname, pword, fsubj) {
 		};
 	});
 };
-window.CRUD_Update = CRUD_Update;
+globalThis.CRUD_Update = CRUD_Update;
 
 function CRUD_Delete(uname, pword) {
 	
@@ -92,4 +92,4 @@ function CRUD_Delete(uname, pword) {
 		}}
 	);
 };
-window.CRUD_Delete = CRUD_Delete;
+globalThis.CRUD_Delete = CRUD_Delete;
