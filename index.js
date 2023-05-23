@@ -17,8 +17,8 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 var database = getDatabase(app);
 
-function CRUD_Create() {
-	console.log("Create Function");
+function CRUD_Create(fname) {
+	console.log(fname);
 };
 window.CRUD_Create = CRUD_Create;
 

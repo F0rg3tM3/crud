@@ -8,11 +8,28 @@
 		<script type="module" src="index.js"></script>
 		<script>
 			function getInfo() {
-				CRUD_Create();
+				var fname = document.getElementById("fname").value;
+				var lname = document.getElementById("lname").value;
+				var uname = document.getElementById("uname").value;
+				var pword = document.getElementById("pword").value;
+				var fsubj = document.getElementById("fsubj").value;
+				return {fname, lname, uname, pword, fsubj}
 			};
 
 			function create() {
-				CRUD_Create();
+				CRUD_Create(getInfo()[0]);
+			};
+			
+			function read() {
+				CRUD_Read();
+			};
+			
+			function update() {
+				CRUD_Update();
+			};
+			
+			function delete() {
+				CRUD_Delete();
 			};
 			
 		</script>
