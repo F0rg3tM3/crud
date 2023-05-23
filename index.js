@@ -11,24 +11,28 @@ const firebaseConfig = {
 	appId:			"1:934235522113:web:d92fb427dfcabaf87c72c0",
 	measurementId:		"G-LQ24E9LHTF",
 	databaseURL:		"https://crud-cc73f.asia-east2.firebasedatabase.app"
-}
+};
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-var database = getDatabase(app)
+var database = getDatabase(app);
 
 function CRUD_Create() {
 	console.log("Create Function");
-}
+};
+window.CRUD_Create = CRUD_Create;
 
 function CRUD_Read() {
 	console.log("Read Function");
-}
+};
+window.CRUD_Read = CRUD_Read;
 
 function CRUD_Update() {
 	console.log("Update Function");
-}
+};
+window.CRUD_Update = CRUD_Update;
 
 function CRUD_Delete() {
 	console.log("Delete Function");
-}
+};
+window.CRUD_Delete = CRUD_Delete;
