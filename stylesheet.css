@@ -46,11 +46,14 @@ p {
 #table {
 	background-color: 	LightGray;
 	border-radius: 		5px;
+	text-align:		center;
+	font-size:		25px;
 }
 
 #backheader {
 	background-color:	DimGray;
 	border-radius:		5px;
+	font-size:		10px;
 }
 
 #form {
