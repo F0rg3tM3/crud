@@ -9,7 +9,7 @@ const firebaseConfig = {
 	databaseURL:		"https://crud-cc73f.firebaseio.com"
 }
 
-const app = firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 function CRUD_Create() {
 	console.log("Create Function");
