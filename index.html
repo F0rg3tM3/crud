@@ -38,8 +38,10 @@
 			};
 			
 			function C_read() {
+				document.getElementById('pword').value = "<blank>";
 				var inputs = getInfo();
 				CRUD_Read(inputs[2]);
+				document.getElementById('pword').value = "";
 			};
 			
 			function C_update() {

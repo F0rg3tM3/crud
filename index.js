@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDoc, doc, query, setDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
 const firebaseConfig = {
 	apiKey: 		"AIzaSyBu65k6Ik4735F9foAilaFsLgATPVBZ8go",
@@ -17,35 +17,41 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 var database = getFirestore(app);
 
+
 function CRUD_Create(fname, lname, uname, pword, fsubj) {
 	
 	// CREATE FUNCTION
 	console.log("Create Function");
+
+	const usersRef = collection(database, "users");
+	
 	try {
-		const docRef = await addDoc(collection(database, "users"), {
+		const docRef = setDoc(doc(usersRef, uname), {
 			firstname: fname,
 			lastname: lname,
 			username: uname,
 			password: pword,
 			fav_subj: fsubj
-		})
+		});
+
+		alert("Saved!")
 	} catch(e) {
 		alert("An issue occured!");
 	}
-	alert('SAVED')
 };
 globalThis.CRUD_Create = CRUD_Create;
+
 
 function CRUD_Read(uname) {
 	
 	// READ FUNCTION
 	console.log("Read Function");	
 	
-	var user_info = database.ref('users/' + uname);
-	user_info.on('value', function(snapshot) { 
-		var data = snapshot.val (); 
-		alert(data.uname);
-	});
+	const user = doc(collection(database, "users"));
+
+	var result = getDoc(user,uname)
+
+	console.log(getDoc(user, uname));
 };
 globalThis.CRUD_Read = CRUD_Read;
 
