@@ -76,4 +76,9 @@ p {
 button {
 	height: 		45px;
 }
-s
+
+#headtitle {
+	position:       absolute;
+	top:            -34px;
+}
+
